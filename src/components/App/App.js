@@ -11,7 +11,6 @@ const App = () => {
         <Header />
         <div className="content">
           <Switch>
-            <Route path="/about">{/* <About /> */}</Route>
             <Route path="/services">{/* <Users /> */}</Route>
             <Route path="/portfolio">{/* <Users /> */}</Route>
             <Route path="/contacts">{/* <Users /> */}</Route>

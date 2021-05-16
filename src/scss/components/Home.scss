@@ -1,11 +1,11 @@
 .home {
   position: relative;
-  font-size: 5rem;
 
   .home-area {
     position: relative;
     min-height: 200px;
     font-weight: 600;
+    font-size: 5rem;
 
     &.first {
       .home-text {
@@ -21,6 +21,55 @@
       position: absolute;
       left: 20%;
       animation: home-in 1.5s ease;
+    }
+  }
+
+  .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      max-width: 700px;
+    }
+
+    .about-me {
+      display: flex;
+
+      .text {
+        flex-grow: 1;
+        padding: 10px;
+      }
+
+      .home-img {
+        flex-shrink: 0;
+        margin-top: -120px;
+        z-index: 1;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-image: url("../../assets/imgs/me.jpg");
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    .skills {
+      .title {
+        font-size: 2rem;
+      }
+
+      .skills-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .gauge {
+          margin: 0 5px;
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }
