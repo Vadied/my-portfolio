@@ -1,7 +1,13 @@
 .app-header {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  background-color: rgba(241, 241, 241, 0.144);
+  background-color: rgba(130, 127, 127, 14%);
   padding: 10px;
+  font-weight: 600;
+
+  a {
+    flex-grow: 1;
+    text-decoration: none;
+    color: $text-color;
+  }
 }
