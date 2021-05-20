@@ -1,13 +1,64 @@
 .app-header {
   display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  justify-content: space-between;
   background-color: rgba(130, 127, 127, 14%);
   padding: 10px;
   font-weight: 600;
+  color: $color-secondary;
 
   a {
     flex-grow: 1;
     text-decoration: none;
-    color: $text-color;
+    color: $color-secondary;
+  }
+
+  .logo {
+    background-image: url("../../assets/imgs/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    animation: menu-in 1.5s ease;
+    color: $color-secondary;
+
+    a {
+      .btn {
+        padding: 10px;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  @media (max-width: $screen-small) {
+    .navigation {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      padding: 5px;
+    }
+
+    .menu {
+      display: block;
+    }
   }
 }

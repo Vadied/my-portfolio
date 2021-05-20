@@ -14,24 +14,11 @@ const buildGauge = (s, i) => (
 const Home = () => {
   return (
     <div className="home">
-      <div className="home-area first">
-        <div className="home-text">
-          <div>
-            <span className="text-primary">D</span>AVIDE
-          </div>
+      <div className="sub-header">
+        <div className="text text-secondary">
+          A<span className="text-color">BOUT ME</span>
         </div>
       </div>
-      <div className="home-area second">
-        <div className="home-text">
-          <div>
-            <span className="text-secondary">FILIPPI</span>.
-          </div>
-          <div>
-            <span className="text-secondary">A</span>BOUT ME
-          </div>
-        </div>
-      </div>
-
       <div className="content">
         <div className="about-me">
           <div className="text">
@@ -47,9 +34,7 @@ const Home = () => {
         </div>
         <div className="skills">
           <div className="title text-bold">SKILLS</div>
-          <div className="skills-container">
-            {skills.map(buildGauge)}
-          </div>
+          <div className="skills-container">{skills.map(buildGauge)}</div>
         </div>
       </div>
     </div>

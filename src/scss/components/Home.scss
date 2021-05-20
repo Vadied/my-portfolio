@@ -1,26 +1,17 @@
 .home {
   position: relative;
 
-  .home-area {
+  .sub-header {
     position: relative;
-    min-height: 200px;
+    background-color: $color-primary;
+    min-height: 165px;
     font-weight: 600;
     font-size: 5rem;
 
-    &.first {
-      .home-text {
-        bottom: 0;
-      }
-    }
-
-    &.second {
-      background-color: $color-primary;
-    }
-
-    .home-text {
+    .text {
       position: absolute;
-      left: 20%;
-      animation: home-in 1.5s ease;
+      bottom: 10px;
+      left: 15%;
     }
   }
 
@@ -52,6 +43,8 @@
         background-image: url("../../assets/imgs/me.jpg");
         background-position: center;
         background-size: contain;
+
+        animation: home-in-me 1.5s ease;
       }
     }
 
