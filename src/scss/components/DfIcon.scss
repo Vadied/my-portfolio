@@ -1,0 +1,24 @@
+.df-icon {
+  position: fixed;
+  top: 75px;
+  left: 10px;
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+
+  .content {
+    position: relative;
+
+    .d,
+    .f {
+      position: absolute;
+    }
+
+    .d {
+        left: 0;
+    }
+    .f {
+        left: 23px;
+    }
+  }
+}

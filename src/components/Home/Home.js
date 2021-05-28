@@ -1,15 +1,20 @@
 import React from "react";
+import { keys } from "lodash";
 
 import Gauge from "../Gauge/Gauge";
 
-const skills = [
-  { label: "test", value: 50, stroke: 10 },
-  { label: "test2", value: 10, stroke: 20 },
-  { label: "test3", value: 60, stroke: 30 },
-];
-const buildGauge = (s, i) => (
-  <Gauge key={i} radius={100} stroke={25} progress={s.value} label={s.label} />
-);
+import { skills } from "./constant";
+
+const buildGauge = (s, i) => <Gauge key={i} progress={s.value} img={s.img} />;
+
+const renderSection = (skill, i) => {
+  return (
+    <div className="section container">
+      <div className="title">{skill}</div>
+      <div className="skill-gauge">{skills[skill].map(buildGauge)}</div>
+    </div>
+  );
+};
 
 const Home = () => {
   return (
@@ -34,7 +39,7 @@ const Home = () => {
         </div>
         <div className="skills">
           <div className="title text-bold">SKILLS</div>
-          <div className="skills-container">{skills.map(buildGauge)}</div>
+          {keys(skills).map(renderSection)}
         </div>
       </div>
     </div>

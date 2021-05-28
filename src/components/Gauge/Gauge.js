@@ -1,27 +1,39 @@
 import React from "react";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 
-const Gauge = ({ radius, stroke, progress, label = "" }) => {
-  const normalizedRadius = radius - stroke;
-  const circumference = normalizedRadius * 2 * Math.PI;
-  const strokeDashoffset = circumference - (progress / 100) * circumference;
-
+const Gauge = ({ progress, img = "" }) => {
+  const styles = {
+    // Customize the root svg element
+    root: {},
+    // Customize the path, i.e. the "completed progress"
+    path: {
+      // Path color
+      stroke: `rgba(62, 152, 199, ${progress / 100})`,
+      // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+      strokeLinecap: "butt",
+      // Customize transition animation
+      transition: "stroke-dashoffset 0.5s ease 0s",
+      // Rotate the path
+      transformOrigin: "center center",
+    },
+    // Customize the circle behind the path, i.e. the "total progress"
+    trail: {
+      // Trail color
+      stroke: "#d6d6d6",
+      // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+      strokeLinecap: "butt",
+      // Rotate the trail
+      transformOrigin: "center center",
+    },
+  };
   return (
     <div className="gauge">
-      <svg className="progress-ring" height={radius * 2} width={radius * 2}>
-        <circle
-          className="progress-ring__circle"
-          stroke="white"
-          fill="transparent"
-          strokeWidth={stroke}
-          strokeDasharray={`${circumference} ${circumference}`}
-          style={{ strokeDashoffset }}
-          r={normalizedRadius}
-          cx={radius}
-          cy={radius}
-        />
-      </svg>
-      <div className="value text-bold center-content">{progress}%</div>
-      {label && <div className="label center-content">{label}</div>}
+      <CircularProgressbarWithChildren
+        value={progress}
+        styles={styles}
+      >
+        <div className={`image ${img}`}></div>
+      </CircularProgressbarWithChildren>
     </div>
   );
 };

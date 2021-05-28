@@ -1,29 +1,38 @@
 .gauge {
-  position: relative;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: $color-primary;
+  width: 125px;
+  margin: 0 5px;
 
-  .progress-ring__circle {
-    transition: stroke-dashoffset 0.35s;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-  }
+  .image {
+    margin-top: -12px;
+    height: calc(100% - 55px);
+    width: calc(100% - 55px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
-  .value {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: green;
-    border-radius: 50%;
-    font-size: 2rem;
-    height: 100px;
-    width: 100px;
-    margin-left: -50px;
-    margin-top: -50px;
-  }
-
-  .label {
-    position: absolute;
+    &.react {
+      background-image: url("/assets/imgs/react_logo.png");
+    }
+    &.vue {
+      background-image: url("/assets/imgs/vuejs_logo.png");
+    }
+    &.css {
+      background-image: url("/assets/imgs/css_logo.png");
+    }
+    &.sass {
+      background-image: url("/assets/imgs/sass_logo.png");
+    }
+    &.git {
+      background-image: url("/assets/imgs/git_logo.png");
+    }
+    &.html {
+      background-image: url("/assets/imgs/html_logo.png");
+    }
+    &.php {
+      background-image: url("/assets/imgs/php_logo.png");
+    }
+    &.node {
+      background-image: url("/assets/imgs/nodejs_logo.png");
+    }
   }
 }

@@ -51,17 +51,12 @@
     .skills {
       .title {
         font-size: 2rem;
+        text-transform: capitalize;
       }
 
-      .skills-container {
+      .skill-gauge {
         display: flex;
-        justify-content: space-evenly;
         flex-wrap: wrap;
-
-        .gauge {
-          margin: 0 5px;
-          margin-bottom: 30px;
-        }
       }
     }
   }
