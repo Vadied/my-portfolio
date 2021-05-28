@@ -8,7 +8,7 @@ const Gauge = ({ progress, img = "" }) => {
     // Customize the path, i.e. the "completed progress"
     path: {
       // Path color
-      stroke: `rgba(62, 152, 199, ${progress / 100})`,
+      stroke: `#febd55`,
       // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
       strokeLinecap: "butt",
       // Customize transition animation
