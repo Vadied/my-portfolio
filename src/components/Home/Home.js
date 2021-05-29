@@ -3,7 +3,7 @@ import { keys } from "lodash";
 
 import Gauge from "../Gauge/Gauge";
 
-import { skills } from "./constant";
+import { skills, aboutMe } from "./constant";
 
 const buildGauge = (s, i) => <Gauge key={i} progress={s.value} img={s.img} />;
 
@@ -19,22 +19,14 @@ const renderSection = (skill, i) => {
 const Home = () => {
   return (
     <div className="home">
-      <div className="sub-header">
+      <div className="header sub-header">
         <div className="text text-secondary">
           A<span className="text-color">BOUT ME</span>
         </div>
       </div>
       <div className="content">
         <div className="about-me">
-          <div className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+          <div className="text">{aboutMe}</div>
           <div className="home-img"></div>
         </div>
         <div className="skills">

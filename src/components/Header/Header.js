@@ -6,7 +6,7 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="app-header">
+    <div className="header header-app">
       <div className="logo"></div>
       {isOpen && <div className="navigation">
         <Link to="/">

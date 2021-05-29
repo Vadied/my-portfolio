@@ -1,8 +1,8 @@
-.app-header {
+.header-app {
   display: flex;
   position: relative;
   justify-content: space-between;
-  background-color: rgba(130, 127, 127, 14%);
+  background-color: $header-color;
   padding: 10px;
   font-weight: 600;
   color: $color-secondary;

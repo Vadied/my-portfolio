@@ -1,17 +1,14 @@
 .home {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   .sub-header {
-    position: relative;
     background-color: $color-primary;
-    min-height: 165px;
     font-weight: 600;
     font-size: 5rem;
 
     .text {
-      position: absolute;
-      bottom: 10px;
-      left: 15%;
     }
   }
 
@@ -27,6 +24,7 @@
 
     .about-me {
       display: flex;
+      white-space: pre-wrap;
 
       .text {
         flex-grow: 1;
@@ -35,7 +33,6 @@
 
       .home-img {
         flex-shrink: 0;
-        margin-top: -120px;
         z-index: 1;
         border-radius: 50%;
         width: 200px;
@@ -44,7 +41,7 @@
         background-position: center;
         background-size: contain;
 
-        animation: home-in-me 1.5s ease;
+        // animation: home-in-me 1.5s ease;
       }
     }
 

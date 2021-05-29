@@ -1,10 +1,12 @@
 html,
 body, #root {
   margin: 0;
+  height: 100%
 }
 
 @import "./variables.scss";
 @import "./keyframe.scss";
 @import "./common.scss";
 @import "./buttons.scss";
+@import "./scrollbar.scss";
 @import "./components.scss";
