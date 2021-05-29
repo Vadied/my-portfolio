@@ -9,7 +9,7 @@ const buildGauge = (s, i) => <Gauge key={i} progress={s.value} img={s.img} />;
 
 const renderSection = (skill, i) => {
   return (
-    <div className="section container">
+    <div className="section container" key={i}>
       <div className="title">{skill}</div>
       <div className="skill-gauge">{skills[skill].map(buildGauge)}</div>
     </div>

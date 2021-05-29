@@ -46,13 +46,25 @@
 
   @keyframes menu-in {
     0% {
-      top: -100%;
+      left: -100%;
       opacity: 0;
     }
 
     100% {
-      top: 100%;
+      left: 0;
       opacity: 1;
+    }
+  }
+
+  @keyframes menu-out {
+    0% {
+      left: 0;
+      opacity: 1;
+    }
+
+    100% {
+      left: -100%;
+      opacity: 0;
     }
   }
   

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Home from "../Home/Home";
+import Contacts from "../Contacts/Contacts";
 import Footer from "../Footer/Footer";
 // import HomeMask from "../HomeMask/HomeMask";
 import DfIcon from "../DfIcon/DfIcon";
@@ -16,9 +17,9 @@ const App = () => {
         {/* <HomeMask /> */}
         <div className="content">
           <Switch>
-            <Route path="/services">{/* <Users /> */}</Route>
-            <Route path="/portfolio">{/* <Users /> */}</Route>
-            <Route path="/contacts">{/* <Users /> */}</Route>
+            <Route path="/contacts">
+              <Contacts />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
