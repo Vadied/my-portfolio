@@ -3,13 +3,6 @@
   flex-direction: column;
   height: 100%;
 
-  .sub-header {
-    background-color: $color-primary;
-    font-weight: 600;
-    font-size: 5rem;
-    padding-left: 20px;
-  }
-
   .content {
     padding: 10px;
     display: flex;
@@ -40,6 +33,11 @@
         background-size: contain;
 
         // animation: home-in-me 1.5s ease;
+      }
+
+      &.small {
+        flex-direction: column-reverse;
+        align-items: center;
       }
     }
 

@@ -25,6 +25,13 @@
   flex-shrink: 0;
 }
 
+.sub-header {
+  background-color: $color-primary;
+  font-weight: 600;
+  font-size: 4rem;
+  padding-left: 20px;
+}
+
 .content {
   flex-grow: 1;
   overflow: auto;

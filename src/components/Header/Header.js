@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Divide as Hamburger } from "hamburger-react";
 
+import { windowSmall } from "../../js/constant";
 import useViewport from "../../features/useViewport/useViewport";
 
 const Header = () => {
@@ -9,11 +10,10 @@ const Header = () => {
   const [isSmall, setIsSmall] = useState(false);
 
   const { width } = useViewport();
-  const breakpoint = 620;
 
   useEffect(() => {
-    setIsSmall(width <= breakpoint);
-  });
+    setIsSmall(width <= windowSmall);
+  }, [width]);
 
   const menuClass = `navigation ${isSmall ? "dropdown-menu" : ""} ${
     isOpen ? "show" : "hidden"
