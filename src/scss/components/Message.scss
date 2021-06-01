@@ -1,0 +1,14 @@
+.message-container {
+  .form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .label {
+      flex-grow: 1;
+    }
+    input {
+      flex-grow: 1;
+    }
+  }
+}

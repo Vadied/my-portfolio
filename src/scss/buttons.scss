@@ -5,13 +5,33 @@
   min-width: 30px;
   min-height: 30px;
   border-radius: $border-radius;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
 
   &:hover {
-    background-color: white;
+    background-color: $color-primary;
     top: 1px;
   }
 
   &.btn-primary {
+    background-color: $color-primary;
+    color: $color-secondary;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+      top: 1px;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-secondary;
     color: $color-primary;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+      top: 1px;
+    }
   }
 }

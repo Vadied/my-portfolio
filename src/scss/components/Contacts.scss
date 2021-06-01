@@ -1,3 +1,38 @@
 .contacts {
-    
+  display: flex;
+  justify-content: space-between;
+
+  .info,
+  .message-container {
+    flex-grow: 1;
+    padding: 10px;
+  }
+
+  .info {
+    padding-right: 10px;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .social {
+      .btn {
+        width: 30px;
+      }
+    }
+  }
+
+  .message-container {
+    background-color: $color-primary;
+  }
+
+  &.small {
+    flex-direction: column;
+
+    .info {
+      margin-bottom: 10px;
+    }
+  }
 }

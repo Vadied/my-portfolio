@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "emailjs-com": "^2.6.4",
+    "formik": "^2.2.8",
     "hamburger-react": "^2.4.1",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",

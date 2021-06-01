@@ -18,24 +18,25 @@ const Contacts = () => {
   return (
     <div className={`contacts ${isSmall ? "small" : ""}`}>
       <div className="info">
-        <div className="title">Contatti</div>
-        <div className="content">
-          <div className="email">dev.filippi@gmail.com</div>
-          <div className="phone">3487164378</div>
-          <div className="social">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/davide-filippi-b474b7133/"
-            >
-              <div className="btn btn-primary">
-                <SiLinkedin />
-              </div>
-            </a>
-          </div>
+        <div className="title">
+          <span className="text-primary">C</span>ontatti
         </div>
-        <Message />
+        <div className="email">dev.filippi@gmail.com</div>
+        <div className="phone">3487164378</div>
+        <div className="social">
+          FOLLOW ME
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/davide-filippi-b474b7133/"
+          >
+            <div className="btn btn-primary">
+              <SiLinkedin />
+            </div>
+          </a>
+        </div>
       </div>
+      <Message />
     </div>
   );
 };
